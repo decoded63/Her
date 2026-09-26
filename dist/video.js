@@ -9,6 +9,9 @@ archiveFiles = function(){
 const baseRenderDesktop = renderDesktop;
 renderDesktop = function(){
   baseRenderDesktop();
+  const archiveGlyph = desktop.querySelector('.archive-launch .glyph');
+  if (archiveGlyph) archiveGlyph.textContent = '🔒';
+  dock.classList.add('friends-dock');
   dock.innerHTML = '<button class="friends-button" onclick="openFriendsLounge()">Your friends have something to say… wanna hear?</button>';
 };
 
