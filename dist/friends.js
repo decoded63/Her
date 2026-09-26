@@ -2,8 +2,8 @@ const friendVideos = [
   { src: 'friend-videos/message-01.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
   { src: 'friend-videos/message-02.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
   { src: 'friend-videos/message-03.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: 'friend-videos/message-04.MOV', type: 'video/quicktime', label: 'A little message', note: 'Press play' },
-  { src: 'friend-videos/message-05.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' }
+  { src: 'friend-videos/message-04.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: 'friend-videos/message-05-compressed.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' }
 ];
 
 function openFriendsLounge(){
