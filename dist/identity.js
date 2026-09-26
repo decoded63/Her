@@ -18,6 +18,7 @@ letterStyle.textContent = `
   .love-note p { margin: 0 0 1.4em; }
   .love-note .signature { margin-top: 2.2em; margin-bottom: 0; }
   .love-note .return { color: #322b22; border-color: #a89984; }
+  .classified-photo { width: 100%; max-height: min(70dvh, 720px); object-fit: contain; display: block; border-radius: 8px; background: #111; }
 `;
 document.head.append(letterStyle);
 
@@ -26,8 +27,12 @@ openLetter = function () {
 };
 
 archiveFiles = function () {
-  win('ARCHIVE: UNLOCKED', `<div class="files"><div class="file" onclick="toast('you were specifically told not to open this.')">README.txt</div><div class="file" onclick="toast('classified, allegedly.')">classified.jpg</div><div class="file" onclick="openFuturePlans()">future_plans.txt</div><div class="file secret-envelope" onclick="openSecretVideo()"><span>✉</span><b>DO_NOT_CLICK.envelope</b></div><div class="file" onclick="openLetter()">for_you.txt</div></div>`);
+  win('ARCHIVE: UNLOCKED', `<div class="files"><div class="file" onclick="openClassifiedPhoto()">classified.jpg</div><div class="file" onclick="openFuturePlans()">future_plans.txt</div><div class="file secret-envelope" onclick="openSecretVideo()"><span>✉</span><b>DO_NOT_CLICK.envelope</b></div><div class="file" onclick="openLetter()">for_you.txt</div></div>`);
 };
+
+function openClassifiedPhoto() {
+  win('classified.jpg', `<section><img class="classified-photo" src="classified.jpg" alt="Classified photo"><p class="muted">classified.jpg</p></section>`, 'wide');
+}
 
 function openFuturePlans() {
   win('future_plans.txt', `<article class="love-note"><header><span>NOTEPAD</span><span>future_plans.txt</span></header><h2>Our future,</h2><p>I don't know exactly where life will take us.</p><p>I don't know what city we'll live in, what our first home will look like, or how many times our plans will change along the way.</p><p>But I know what I want at the end of all of it.</p><p>I want to marry you.</p><p>I want to build a home with you, have kids with you, and watch them grow while we slowly figure out how to be parents together.</p><p>I want the ordinary days too — grocery runs, late-night conversations, stupid arguments, Sunday mornings, family vacations, bills, celebrations, and all the little moments nobody takes pictures of.</p><p>I want to grow older beside you.</p><p>And years from now, when the work is done, the kids have lives of their own, and everything finally becomes a little quieter, I want us to retire somewhere peaceful.</p><p>Just you and me.</p><p>Older, probably complaining about our backs, still making fun of each other, still talking about everything and nothing.</p><p>And hopefully looking back at this exact birthday and realizing that this wasn't just something I wrote for a website.</p><p>It was the plan all along.</p><button class="return" onclick="closeWin()">[ close note ]</button></article>`, 'wide');
