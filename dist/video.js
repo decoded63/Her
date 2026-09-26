@@ -9,7 +9,7 @@ archiveFiles = function(){
 const baseRenderDesktop = renderDesktop;
 renderDesktop = function(){
   baseRenderDesktop();
-  dock.innerHTML = '<button class="friends-button" onclick="toast(\'A few sweet words are on their way.\')">Your friends have something to say… wanna hear?</button>';
+  dock.innerHTML = '<button class="friends-button" onclick="openFriendsLounge()">Your friends have something to say… wanna hear?</button>';
 };
 
 if (!os.classList.contains('hidden')) renderDesktop();
