@@ -1,0 +1,3 @@
+# Local packaging and handoff files are not part of the website source.
+/work/
+/outputs/
