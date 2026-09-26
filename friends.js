@@ -1,10 +1,9 @@
-const friendVideoRevision = '20260926';
 const friendVideos = [
-  { src: `friend-videos/message-01.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: `friend-videos/message-02.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: `friend-videos/message-03.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: `friend-videos/message-04.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: `friend-videos/message-05-compressed.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' }
+  { src: 'friend-videos/message-01.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: 'friend-videos/message-02.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: 'friend-videos/message-03.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: 'friend-videos/message-04.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: 'friend-videos/message-05-compressed.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' }
 ];
 
 function openFriendsLounge(){
