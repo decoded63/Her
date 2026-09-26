@@ -1,9 +1,10 @@
+const friendVideoRevision = '20260926';
 const friendVideos = [
-  { src: 'friend-videos/message-01.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: 'friend-videos/message-02.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: 'friend-videos/message-03.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: 'friend-videos/message-04.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' },
-  { src: 'friend-videos/message-05-compressed.mp4', type: 'video/mp4', label: 'A little message', note: 'Press play' }
+  { src: `friend-videos/message-01.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: `friend-videos/message-02.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: `friend-videos/message-03.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: `friend-videos/message-04.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' },
+  { src: `friend-videos/message-05-compressed.mp4?v=${friendVideoRevision}`, type: 'video/mp4', label: 'A little message', note: 'Press play' }
 ];
 
 function openFriendsLounge(){
@@ -12,5 +13,5 @@ function openFriendsLounge(){
 
 function openFriendVideo(index){
   const video = friendVideos[index];
-  win(`MESSAGE ${String(index + 1).padStart(2, '0')}`, `<section class="friend-video"><div class="mini-kicker">JUST FOR YOU</div><h2>A little something from your people</h2><video controls autoplay playsinline preload="metadata"><source src="${video.src}" type="${video.type}">Your browser can’t play this video.</video></section>`, 'wide');
+  win(`MESSAGE ${String(index + 1).padStart(2, '0')}`, `<section class="friend-video"><div class="mini-kicker">JUST FOR YOU</div><h2>A little something from your people</h2><video controls playsinline preload="auto"><source src="${video.src}" type="${video.type}">Your browser can’t play this video.</video></section>`, 'wide');
 }
