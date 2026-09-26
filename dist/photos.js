@@ -10,7 +10,7 @@ her.albums = [
 ];
 let photoAlbum = null;
 const originalOpenApp = openApp;
-openApp = function(app) { if(app==='photos') { showAlbums(); return; } originalOpenApp(app); };
+openApp = function(app) { if(app==='photos') { showAlbums(); return; } if(app==='messages') { showMessages(); return; } originalOpenApp(app); };
 const photoPath = n => `photos/photo-${String(n).padStart(2,'0')}.jpeg`;
 function showAlbums() {
   photoAlbum=null;
